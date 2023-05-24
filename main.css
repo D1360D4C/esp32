@@ -1,0 +1,99 @@
+.wrapper{
+		width: 100%;
+		padding-top: 50px;
+	}
+	.col_3{
+		width: 33.3333333%;
+		float: left;
+		min-height: 1px;
+	}
+	#submit_button{
+		background-color: #2bbaff; 
+		color: #FFF; 
+		font-weight: bold; 
+		font-size: 40; 
+		border-radius: 15px;
+    	text-align: center;
+	}
+	.led_img{
+		height: 400px;		
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+		
+		animation: fadeIn ease 1.5s;
+	   -webkit-animation: fadeIn ease 1.5s;
+	   -moz-animation: fadeIn ease 1.5s;
+	   -o-animation: fadeIn ease 1.5s;
+	   -ms-animation: fadeIn ease 1.5s;
+	}
+	@keyframes fadeIn {
+	  0% {opacity:0;}
+	  100% {opacity:1;}
+	}
+
+
+	#bulb_img{
+		object-fit: contain;
+	}
+	
+	@media only screen and (max-width: 600px) {
+		.col_3 {
+			width: 100%;
+		}
+		.wrapper{
+			width: 100%;
+			padding-top: 5px;
+		}
+		.led_img{
+			height: 300px;		
+			width: 80%;
+			margin-right: 10%;
+			margin-left: 10%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+.main_title{
+	font-size: 35px;
+	color: #337ab7;
+	width: 100%;
+	text-align: center;
+	height: 60px;
+	font-weight: 900;
+}
+
+.bold_text{
+	font-size: 20px;
+	font-weight: 700;
+	
+	animation: text_size ease 1s;
+	   -webkit-animation: text_size ease 1s;
+	   -moz-animation: text_size ease 1s;
+	   -o-animation: text_size ease 1s;
+	   -ms-animation: text_size ease 1s;
+	
+}
+@keyframes text_size {
+	  0% {font-size:30;}
+	  100% {font-size:20;}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

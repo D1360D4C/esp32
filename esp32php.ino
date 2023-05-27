@@ -70,9 +70,9 @@ void loop() {
 
           }
           for(int i=0;i<10;i++){
-            String a = String(i); //convierte el contador en string para poder comparar
+            //String a = String(i); //convierte el contador en string para poder comparar
             int pin = i+1;   //trabajo con pines del esp32 del 1 al 10
-            if (vec[i] == a){ //compara string con string
+            if (vec[i] == "1"){ //compara string con string
               digitalWrite(pin,HIGH);
             }else{
               digitalWrite(pin,LOW);

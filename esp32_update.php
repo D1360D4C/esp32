@@ -5,9 +5,14 @@ include("connection.php");
 //Read the database
 if (isset($_POST['check_LED_status'])) {
 	$led_id = $_POST['check_LED_status'];	
+//$sql = "SELECT CONCAT(led1, led2, led3, led4) AS nuevo_campo FROM prueba;";
+
 	$sql = "SELECT * FROM LEDS WHERE ID = '$led_id';";
 	$result   = mysqli_query($conn, $sql);
 	$row  = mysqli_fetch_assoc($result);
+
+	//echo $row['nuevo_campo'];
+	
 	if($row['estado'] == 0){
 		echo "LED_is_off";
 	}

@@ -11,7 +11,7 @@ String LED_id = "1";                          //Just in case you control more th
 String data_to_send = "";                     //Text data to send to the server
 unsigned int Actual_Millis, Previous_Millis;
 int refresh_time = 200;                       //Refresh rate of connection to website (recommended more than 1s)
-
+String vec[10];
 
 //Inputs/outputs
 int LED = 2;                                  //LED connected on IO2
@@ -64,6 +64,23 @@ void loop() {
           String response_body = http.getString();                                //Save the data comming from the website
           Serial.print("Server reply: ");                                         //Print data to the monitor for debug
           Serial.println(response_body);
+
+          for(int i=0;i<10;i++){
+            vec[i]= response_body.substring(i,i+1);
+
+          }
+          for(int i=0;i<10;i++){
+            String a = String(i); //convierte el contador en string para poder comparar
+            int pin = i+1;   //trabajo con pines del esp32 del 1 al 10
+            if (vec[i] == a){ //compara string con string
+              digitalWrite(pin,HIGH);
+            }else{
+              digitalWrite(pin,LOW);
+            }
+
+          }
+
+          
 
           //If the received data is LED_is_off, we turn OFF the SSR and LED
           if(response_body == "LED_is_off"){
